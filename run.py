@@ -1,3 +1,4 @@
+import random
 
 """
 The quest is a multiple chioce game where the user make choice along the way.
@@ -22,7 +23,73 @@ Defining quiz-game to be called nested inside the quest.
 
 # def hangman()
 
-# def quiz()
+# defining the quiz for use under - Sneak - beach 
+
+def quiz():
+    print("Welcome then, to my impossible quiz....")
+
+    playing = input("Do you feel like you can beat me? ")
+
+    if playing.lower() != "yes":
+        quit()
+
+    print("Okey then....")
+    print("But don't come crying to me when you fail....")
+
+    # To keep the right answers from user
+
+    score = 0
+
+    # Questions
+
+    answer = input("Let's start up with an easy one...  What's 2 + 2? ")
+    if answer == "4":
+        print("Well done! There's some hope after all... ")
+        score += 1
+    else:
+        print("Ha! And you thougth you could beat me?")
+        print("The answer is 4.")
+
+
+    answerTwo = input("What's more, 5 ants or 4 elephants? ").lower()
+    if answer == "5 ants" or "5" or "ants":
+        print("Correct, but that wheren't a hard question! ")
+        score += 1
+    else:
+        print("Nope, you had a 50% chance and still got it wrong!")
+        print("The answer was 5 ants.")
+
+
+    answerThree = input(
+        "What was to the left of the bridge you just passed?\n").lower()
+    if answer == "beach":
+        print("Okey, that's right. But here comes some harder questions! ")
+        score += 1
+    else:
+        print("Nope. You're just a lot of talk huh? Not that smart?")
+        print("The answer was this beach.")
+
+    print("I hope you know you Lord of the rings...")
+    answerFour = input(
+        "What was the name of the hobbit who took the ring to Mordor? ").lower()
+    if answer == "frodo":
+        print("Hmmm, still easy questions. Don't get cocky!")
+        score += 1
+    else:
+        print("Nope! Well, unleast you're pretty... ")
+        print("The answer was Frodo.")
+
+
+    answerFive = input("Last question. A simple one... Who's the best? ").lower()
+    if answer == "You" or "Me":
+        print("Yeah, Okey... You beat me. I guess you do got some skill. ")
+        score += 1
+    else:
+        print("So close to beating me. But I was never worried. I'm the best!")
+
+
+    print("Well, you got " + str(score) + " questions right!")
+
 
 # Start of the quest
 
