@@ -41,7 +41,8 @@ while True:
         continue
     else:
         print("No, No, No. Remember... ")
-        print("Be sure to type in your choosen answers who is provided for you in (bracets)")
+        print("Be sure to type in your choosen answers")
+        print("who is provided for you in (bracets)")
         print("You only get this warning. Fail this inside the quest and you lose!")
         continue
 
@@ -72,6 +73,7 @@ if choiceOne == "talk":
     # The talk - Beach
 
     if chioceOneTwo == "beach":
+
         print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
         print("")
         print("You get to the lovely beach and see a the back of a man.  ")
@@ -104,6 +106,8 @@ if choiceOne == "talk":
         print("But you are quite hungry after you little walk.")
         choiceForestOne = input("Do you (pick) them up or do you (leave) them?\n").lower()
 
+        # The talk - forest - pick
+
         if choiceForestOne == "pick":
             print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
             print("")
@@ -115,13 +119,17 @@ if choiceOne == "talk":
             print("Do you (fight) him of with your knife,")
             choiceForestTwo = input("or du you try to (lure) him of with some mushrooms?\n").lower()
 
+            # The talk - forest - pick - fight
+
             if choiceForestTwo == "fight":
                 print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
                 print("")
                 print("After a long fight you manage to fight of the wolf.")
                 print("But you have sustained injuries.")
                 print("You try to walk but it hurts.")
-                choiceForestThree = input("Do you go (home) or du you continue the (quest)\n?").lower()
+                choiceForestThree = input("Do you go (home) or du you continue the (quest)?\n").lower()
+
+                # The - forest - pick - fight - home
 
                 if choiceForestThree == "home":
                     print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
@@ -132,11 +140,29 @@ if choiceOne == "talk":
                     print("After a while you meet someone familiar -")
                     print("the guard from the bidge. He asks")
                     print("-'Do you still have my knife?")
-                    choiceForestFour = input("(Yes or (no)?\n")
+                    choiceForestFour = input("(Yes or (no)?\n").lower()
+                    
+                    # The forest - pick - fight - home - yes
+
+                    if choiceForestFour == "yes":
+                        print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
+                        print("")
+                        print("The guard says 'You passed the test. As a reward you have earned")
+                        print("this treasure! Follow this path back and you'll be back home in notime!")
+
+                    # The forest - pick - fight - home - no
+
+                    elif choiceForestFour == "no":
+                        print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
+                        print("")
+                        print("")
+
+                # The forest - pick - fight - quest
 
                 elif choiceForestThree == "quest":
                     print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
                     print("")
+                    print("Oh no! Your injuries is really taking it's toll")
 
             elif choiceForestTwo == "lure":
                 print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
@@ -183,8 +209,14 @@ elif choiceOne == "sneak":
     
         choiceTwoThree = input("Are you ready? (Yes) or (no)").lower()
 
-    if choiceTwoThree == "yes":
-        quiz()
+        if choiceTwoThree == "yes":
+            quiz()
 
-
-
+print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
+print("")
+print("So, how did you do?")
+print("Did you have to answer some hard questions?")
+print("Did you get the treasure?")
+print("Or did you even get to be a god?")
+print("Maybe you wish you've picked some other answers?")
+print("Well, play again and see where the quest will take you this time...")
