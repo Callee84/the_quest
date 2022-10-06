@@ -11,6 +11,9 @@ print("You can cross path with some intresting beeings")
 print("and will have to make some hard choices along your choosen path.")
 print("But be aware... Your choices has consequences!\n")
 print("HINT - Be sure to type in your choosen answers who is provided for you in (bracets)")
+print("This in important. If you don't do this, you will lose!")
+
+def quiz()
 
 # Start of the quest
 
@@ -35,6 +38,7 @@ while True:
 # Chioce One - Talk or sneak
 
 print("You come to a river. There's a man guarding the only bridge.")
+print(("He looks quite big and almost dangeorus from this far out."))
 
 choiceOne = input(
      "Do you (talk) to the guard or du you try to (sneak) past? \n").lower()
@@ -58,17 +62,32 @@ if choiceOne == "talk":
         print("You get to the lovely beach and see a the back of a man.  ")
         print("You say 'Hey mister, what a lovely day', the man turns around and...")
         print("IT'S DEATH HIMSELF!!! He says ")
-        print("'-I've been waiting for you.")
+        print("-'I've been waiting for you.")
         print("But since it's such a lovely day as you say it is,")
         print("I will give you a second chance on life. ")
         print("Just guess this five letter word.' ")
+
+        # The talk - Choice three
         
+        choiceOneThree = input("Are you ready? (Yes) or (no) \n").lower()
+
+        if choiceOneThree == "yes":
+            quiz()
+
+        elif choiceOneThree == "no":
+            print("Death says")
+            print("-'Well then. I'm glad! You have accepted your faith.")
+            print("From here on out you shall be known as the fearless!'") 
+
+
+        
+
     elif chioceOneTwo == "forest":
         print("")
         print("You reach the forest and you come across som mushrooms.")
         print("You don't know if these mushrooms are poisones or not")
         print("But you are quite hungry after you little walk.")
-        input("Do you (pick) them up or do you (leave) them? ")
+        input("Do you (pick) them up or do you (leave) them? ").lower()
         
 
 
