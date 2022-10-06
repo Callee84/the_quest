@@ -1,11 +1,11 @@
 import random
 
-"""
-The quest is a multiple chioce game where the user make choice along the way.
-"""
-print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
+print("Welcome to the Quest!\n")
+
+print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n")
 name = input("What's your name? ")
 print("Welcome", name, "!\n")
+
 
 print("This is tale about a exiting journey across the mythical lands of")
 print("'PythWorld'.")
@@ -26,6 +26,11 @@ Defining quiz-game to be called nested inside the quest.
 # defining the quiz for use under - Sneak - beach 
 
 def quiz():
+"""
+This function is a quiz which is called in the in the Quest '
+under - Sneak - beach
+"""
+
     print("Welcome then, to my impossible quiz....")
 
     playing = input("Do you feel like you can beat me? ")
