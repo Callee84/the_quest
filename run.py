@@ -26,10 +26,10 @@ Defining quiz-game to be called nested inside the quest.
 # defining the quiz for use under - Sneak - beach 
 
 def quiz():
-"""
-This function is a quiz which is called in the in the Quest '
-under - Sneak - beach
-"""
+    """
+    This function is a quiz which is called in the in the Quest '
+    under - Sneak - beach
+    """
 
     print("Welcome then, to my impossible quiz....")
 
