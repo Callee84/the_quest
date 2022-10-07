@@ -7,12 +7,12 @@ name = input("What's your name? ")
 print("Welcome", name, "!\n")
 
 
-print("This is tale about a exiting journey across the mythical lands of")
+print("This is the tale about a exiting journey across the mythical lands of")
 print("'PythWorld'.")
-print("You can cross path with some intresting beeings")
-print("and will have to make some hard choices along your choosen path.")
-print("But be aware... Your choices has consequences!\n")
-print("HINT - Be sure to type in your choosen answers who is provided for you in (bracets)")
+print("You can cross path with some intresting characters")
+print("and you will have to make some hard choices along your choosen path.")
+print("But be aware... your choices has consequences!\n")
+print("HINT - Be sure to type in your choosen answer who is provided for you in (bracets)")
 print("This in important. If you don't do this, you will lose!")
 print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
 
