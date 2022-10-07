@@ -1,33 +1,5 @@
 import random
-
-print("Welcome to the Quest!\n")
-
-print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n")
-name = input("What's your name? ")
-print("Welcome", name, "!\n")
-
-
-print("This is the tale about a exiting journey across the mythical lands of")
-print("'PythWorld'.")
-print("You can cross path with some intresting characters")
-print("and you will have to make some hard choices along your choosen path.")
-print("But be aware... your choices has consequences!\n")
-print("HINT - Be sure to type in your choosen answer who is provided for you in (bracets)")
-print("This in important. If you don't do this, you will lose!")
-print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
-
-
-"""
-Defining quiz-game to be called nested inside the quest.
-"""
-
-
-
-#     """
-#     Function Hangman game to be called at - The talk - beach
-#     The game should pick a random word from 'words' list.
-#     And the user has 7 guesses to get it right.
-#     """
+import images
 
 words = ["sunny", "beach", "river", "enter", "quest", "sneak"]
 word = random.choice(words)
@@ -36,7 +8,14 @@ show_word = list(len(word)*'_')
 guesses = 7
 survive = False
 
+
 def hangman(letter, word):
+    """
+    Function Hangman game to be called at - The talk - beach
+    The game should pick a random word from 'words' list.
+    And the user has 7 guesses to get it right.
+    """
+
     global show_word
     for i in range(0, len(word)):
         letter = word[i]
@@ -148,6 +127,22 @@ def quiz():
 
     print("Well, you got " + str(score) + " questions right!")
 
+
+print("Welcome to the Quest!\n")
+
+print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n")
+name = input("What's your name? ")
+print("Welcome", name, "!\n")
+
+
+print("This is the tale about a exiting journey across the mythical lands of")
+print("'PythWorld'.")
+print("You can cross path with some intresting characters")
+print("and you will have to make some hard choices along your choosen path.")
+print("But be aware... your choices has consequences!\n")
+print("HINT - Be sure to type in your choosen answer who is provided for you in (bracets)")
+print("This in important. If you don't do this, you will lose!")
+print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
 
 # Start of the quest
 
