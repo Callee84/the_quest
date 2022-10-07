@@ -21,25 +21,25 @@ print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
 Defining quiz-game to be called nested inside the quest.
 """
 
-def hangman():
+# def hangman():
 
-    """
-    Function Hangman game to be called at - The talk - beach
-    The game should pick a random word from word_list.
-    And the user has 7 guesses to get it right.
-    """
+#     """
+#     Function Hangman game to be called at - The talk - beach
+#     The game should pick a random word from word_list.
+#     And the user has 7 guesses to get it right.
+#     """
 
-    end_game = False
-    word_list = ["sunny", "beach", "river", "enter", "quest", "sneak"]
-    word_picked = random.choice(word_list)
+#     end_game = False
+#     word_list = ["sunny", "beach", "river", "enter", "quest", "sneak"]
+#     word_picked = random.choice(word_list)
 
-    guess = input("Pick a letter \n").lower()
+#     guess = input("Pick a letter \n").lower()
 
-    for letter in word_picked:
-        if letter == guess:
-            print("Yes, that's right. Lucky you...")
-        else:
-            print("Nope, guess again")
+#     for letter in word_picked:
+#         if letter == guess:
+#             print("Yes, that's right. Lucky you...")
+#         else:
+#             print("Nope, guess again")
 
 # defining the quiz for use under - Sneak - beach 
 
@@ -302,6 +302,9 @@ elif choiceOne == "sneak":
 
         if choiceTwoThree == "yes":
             quiz()
+
+else:
+    raise ValueError("Nope, that's not an option! Try again")
 
 print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
 print("")
