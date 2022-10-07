@@ -23,8 +23,14 @@ Defining quiz-game to be called nested inside the quest.
 
 def hangman():
 
-    word_list = ["sunny", "beach", "river", "enter", "quest", "sneak"]
+    """
+    Function Hangman game to be called at - The talk - beach
+    The game should pick a random word from word_list.
+    And the user has 7 guesses to get it right.
+    """
 
+    end_game = False
+    word_list = ["sunny", "beach", "river", "enter", "quest", "sneak"]
     word_picked = random.choice(word_list)
 
     guess = input("Pick a letter \n").lower()
