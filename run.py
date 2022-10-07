@@ -21,25 +21,59 @@ print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
 Defining quiz-game to be called nested inside the quest.
 """
 
-# def hangman():
+
 
 #     """
 #     Function Hangman game to be called at - The talk - beach
-#     The game should pick a random word from word_list.
+#     The game should pick a random word from 'words' list.
 #     And the user has 7 guesses to get it right.
 #     """
 
-#     end_game = False
-#     word_list = ["sunny", "beach", "river", "enter", "quest", "sneak"]
-#     word_picked = random.choice(word_list)
+words = ["sunny", "beach", "river", "enter", "quest", "sneak"]
+word = random.choice(words)
+word = word.upper()
+show_word = list(len(word)*'_')
+guesses = 7
+survive = False
 
-#     guess = input("Pick a letter \n").lower()
+def hangman(letter, word):
+    global show_word
+    for i in range(0, len(word)):
+        letter = word[i]
+        if guess == letter:
+            show_word[i] = guess
+    if '_' not in show_word:
+        return True
+    else:
+        return False
 
-#     for letter in word_picked:
-#         if letter == guess:
-#             print("Yes, that's right. Lucky you...")
-#         else:
-#             print("Nope, guess again")
+
+def status():
+    print(images.hangman_stages[7-guesses])
+    print(' '.join([str(e) for e in show_word]))
+    print('You have', guesses, 'guess left...')        
+
+
+while survive == False and guesses > 0:
+    status()
+    guess = input("You can guess a letter or the entire word")
+    guess = guess.upper()
+
+    if guess == word:
+        survive = True
+        show_word = word
+    elif len(guess) == 1 and guess in word:
+        survive = hangman(guess, word)
+    else:
+        guesses -= 1
+    status()
+
+if survive:
+    print("Well done. I have to say you earned your life back!")
+else:
+    print("That's all your guesses. It's time to follow me")
+    print("By the way, the world I was looking for was ", word)
+
 
 # defining the quiz for use under - Sneak - beach 
 
@@ -180,7 +214,7 @@ if choiceOne == "talk":
         choiceOneThree = input("Are you ready? (Yes) or (no) \n").lower()
 
         if choiceOneThree == "yes":
-            quiz()
+            hangman()
 
         elif choiceOneThree == "no":
             print("Death says")
